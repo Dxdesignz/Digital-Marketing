@@ -1,0 +1,2187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Root */
+:root {
+    ---white: #ffffff;
+    ---black: #222222;
+    ---red: #ff2b29;
+    ---grey: #858585;
+    ---light: #ededed;
+    ---yellow:#ffba00;
+}
+
+/* Root */
+
+/* Body */
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0px;
+    background-image: url(img/back.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-track{
+    background: var(---light);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(---grey);
+    height: 200px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(---red);
+}
+
+section {
+    padding: 10px 120px;
+}
+
+/* Body */
+
+/*Arrow*/
+#upper{
+    font-size: 20px;
+    color: var(---black);
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    background-color: var(---white);
+    box-shadow: 0px 0px 10px #2222221a;
+    cursor: pointer;
+    z-index: 7;
+}
+#upper:hover{
+    color: var(---white);
+    background-color: var(---red);
+}
+/*Arrow*/
+
+/*Animation*/
+.loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(---white);
+    z-index: 15;
+}
+.loading img{
+    width: 20%;
+}
+.dispper{
+    animation: vanish 1s forwards;
+}
+@keyframes vanish {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/*Animation*/
+
+/*Header*/
+.header {
+    background-color: transparent;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .container .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .container .left .navbar .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .container .left .navbar .link a {
+    color: var(---black);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0px 20px;
+    background-color: transparent;
+}
+
+.header .container .left .navbar .link a:hover {
+    color: var(---red);
+}
+
+.header .container .right {
+    display: flex;
+    align-items: center;
+}
+
+.header .container .right button {
+    width: 170px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(---white);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.062);
+    position: relative;
+    z-index: 7;
+    color: var(---white);
+    border: 1px solid #85858541;
+    cursor: pointer;
+}
+
+.header .container .right button:hover {
+    border: 1px solid var(---red);
+    box-shadow: 0px 10px 15px #ff2d2934;
+    transition: 0.2s all linear;
+}
+
+.header .container .right button::before {
+    content: "";
+    background-color: #ff2b29;
+    width: 150px;
+    height: 55px;
+    position: absolute;
+    left: 9px;
+    top: 6px;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.header .container .right i {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(---light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: var(---grey);
+    cursor: pointer;
+}
+
+.header .container .right #speaker {
+    margin-right: 20px;
+}
+
+.header .container .right i:hover {
+    border: 2px solid var(---red);
+    color: var(---red);
+}
+
+.header .container #menu {
+    display: none;
+    margin-right: 20px;
+    z-index: 7;
+}
+
+.header .container .left .navbar.active {
+    left: 0%;
+    transition: 0.7s all linear;
+}
+
+.header .container .right .button i {
+    display: none;
+}
+.hero-area .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-area .container .text h1 {
+    font-size: 65px;
+    color: var(---black);
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+.hero-area .container .text h1 span{
+    font-weight: 700;
+    color: var(---red);
+    position: relative;
+}
+.hero-area .container .text h1 span::before{
+    background-color: #ff2d2925;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    top: 55%;
+}
+.hero-area .container .text p{
+    font-size: 20px;
+    color: var(---grey);
+    font-weight: 500;
+    line-height: 40px;
+    margin-top: 20px;
+}
+.hero-area .container .text .hero-button{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.hero-area .container .text .hero-button button{
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(---white);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.062);
+    position: relative;
+    z-index: 7;
+    color: var(---white);
+    border: 1px solid #85858541;
+    cursor: pointer;
+}
+.hero-area .container .text .hero-button button:hover{
+    border: 1px solid var(---red);
+    box-shadow: 0px 10px 15px #ff2d2934;
+    transition: 0.2s all linear;
+}
+.hero-area .container .text .hero-button button::before{
+    content: "";
+    background-color: #ff2b29;
+    width: 150px;
+    height: 45px;
+    position: absolute;
+    left: 9px;
+    top: 6px;
+    border-radius: 10px;
+    z-index: -1;
+}
+.hero-area .container .text .hero-button a{
+    font-size: 16px;
+    color: var(---black);
+    font-weight: 500;
+    margin-left: 20px;
+}
+.hero-area .container .text .hero-button a:hover{
+    color: var(---red);
+}
+.hero-area .container .image{
+    position: relative;
+}
+.hero-area .container .image .search-area{
+    position: absolute;
+    right: 7%;
+    top: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(---white);
+    width: 270px;
+    height: 150px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
+    border-radius: 0px 25px 25px 25px;
+}
+.hero-area .container .image .search-area::before{
+    content: "";
+    background-color: var(---red);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 10px;
+    border-radius: 100px;
+}
+.hero-area .container .image .search-area h5{
+    font-size: 18px;
+    color: var(---red);
+    font-weight: 500;
+}
+.hero-area .container .image .search-area .input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 225px;
+    height: 40px;
+    border-radius: 6px;
+    border: 2px solid var(---light);
+    margin-top: 10px;
+}
+.hero-area .container .image .search-area .input input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(---black);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.hero-area .container .image .search-area .input input::placeholder{
+    color: var(---black);
+}
+.hero-area .container .image .search-area .input i{
+    background-color: var(---red);
+    width: 50px;
+    height: 40px;
+    border-radius: 0px 6px 6px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(---white);
+    font-size: 12px;
+    cursor: pointer;
+}
+.hero-area .i1{
+    position: absolute;
+    right: 35%;
+    top: 5%;
+    animation: bounce1 2s ease infinite;
+}
+.hero-area .i1 img{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+    border-radius: 100px;
+}
+.hero-area .i2{
+    position: absolute;
+    right: 60%;
+    top: 81%;
+    animation: bounce2 2s ease infinite;
+}
+.hero-area .i2 img{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+    border-radius: 100px;
+    background-color: transparent;
+}
+.hero-area .i3{
+    position: absolute;
+    right: 6%;
+    top: 18%;
+    animation: bounce3 2s ease infinite;
+}
+.hero-area .i3 img{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+    border-radius: 100px;
+}
+@keyframes bounce1 {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+}
+@keyframes bounce2 {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% { transform: scale(.9); }
+      100% { transform: scale(1); }
+}
+@keyframes bounce3 {
+    30% { transform: scale(1.2); }
+    40%, 60% { transform: rotate(-20deg) scale(1.2); }
+    50% { transform: rotate(20deg) scale(1.2); }
+    70% { transform: rotate(0deg) scale(1.2); }
+    100% { transform: scale(1); }
+}
+/*Hero Area*/
+
+/*Service*/
+.ser{
+    margin-top: 150px;
+}
+.ser h1{
+    text-align: center;
+    font-size: 70px;
+    color: var(---black);
+    font-weight: 600;
+}
+.ser h1 span{
+    color: var(---red);
+    font-weight: 500;
+    position: relative;
+}
+.ser h1 span::before{
+    content: "";
+    background-color: #ff2d2925;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 18px;
+}
+.ser .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.ser .container .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 525px;
+    height: 430px;
+}
+.ser .container #box-left{
+    border-right: 2px solid var(---light);
+}
+.ser .container #box-right{
+    border-left: 2px solid var(---light);
+}
+.ser .container .box h1{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 40px;
+}
+.ser .container .box p{
+    color: var(---grey);
+    text-align: center;
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 5px 0px;
+}
+.ser .container .box button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(---red);
+    cursor: pointer;
+}
+.ser .container .box button i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 5px;
+    animation: shake 2s ease infinite;
+}
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-2px);}
+	20%, 40%, 60%, 80% {transform: translateX(2px);}
+}
+/*Service*/
+
+/*About Us*/
+.abo{
+    margin-top: 150px;
+}
+.abo .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.abo .container .text h1{
+    font-size: 60px;
+    color: var(---black);
+    font-weight: 600;
+}
+.abo .container .text h1 span{
+    color: var(---red);
+    font-weight: 500;
+    position: relative;
+}
+.abo .container .text h1 span::before{
+    content: "";
+    background-color: #ff2d2925;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 10px;
+}
+.abo .container .text p{
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 500;
+    color: var(---grey);
+    margin: 30px 0px;
+}
+.abo .container .text b{
+    color: var(---red);
+}
+.abo .container .text .abo-button{
+    display: flex;
+    align-items: center;
+}
+.abo .container .text .abo-button button{
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(---white);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.062);
+    position: relative;
+    z-index: 7;
+    color: var(---white);
+    border: 1px solid #85858541;
+    cursor: pointer;
+}
+.abo .container .text .abo-button button:hover{
+    border: 1px solid var(---red);
+    box-shadow: 0px 10px 15px #ff2d2934;
+    transition: 0.2s all linear;
+}
+.abo .container .text .abo-button button::before{
+    content: "";
+    background-color: #ff2b29;
+    width: 150px;
+    height: 45px;
+    position: absolute;
+    left: 9px;
+    top: 6px;
+    border-radius: 10px;
+    z-index: -1;
+}
+.abo .container .text .abo-button a{
+    font-size: 16px;
+    color: var(---black);
+    font-weight: 500;
+    margin-left: 20px;
+}
+.abo .container .text .abo-button a:hover{
+    color: var(---red);
+}
+.abo .container .image{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.abo .container .image::before{
+    position: absolute;
+    content: "";
+    width: 700px;
+    height: 800px;
+    background-color: var(---red);
+    border-radius: 150px;
+    left: -31%;
+    top: 10%;
+    z-index: -7;
+    transform: rotate(15deg);
+    padding: 0px 0px;
+    animation: spin 20s infinite linear;
+    box-shadow: 0px 0px 70px #ff2d29ad;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+/*About Us*/
+
+/*Project*/
+.pro{
+    margin-top: 150px;
+}
+.pro h1{
+    font-size: 60px;
+    color: var(---black);
+    font-weight: 600;
+    text-align: center;
+}
+.pro h1 span{
+    color: var(---red);
+    font-weight: 500;
+    position: relative;
+}
+.pro h1 span::before{
+    content: "";
+    background-color: #ff2d2925;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 10px;
+}
+.pro .pro-slider{
+    margin-top: 100px;
+}
+.pro .pro-slider .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.pro .pro-slider .image img:hover{
+    border: 2px solid var(---red);
+}
+.pro .pop-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(---black);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}
+.pro .pop-image span{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: var(---white);
+    cursor: pointer;
+    z-index: 15;
+}
+.pro .pop-image span:hover{
+    color: var(---red);
+}
+.pro .pop-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(---stoke);
+    border-radius: 10px;
+    object-fit: cover;
+    width: 750px;
+}
+/*Project*/
+
+/*Testimonial*/
+.tes{
+    margin-top: 150px;
+}
+.tes h1{
+    font-size: 60px;
+    color: var(---black);
+    font-weight: 600;
+    text-align: center;
+}
+.tes h1 span{
+    color: var(---red);
+    font-weight: 500;
+    position: relative;
+}
+.tes h1 span::before{
+    content: "";
+    background-color: #ff2d2925;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 10px;
+}
+.tes .tes-slider{
+    margin-top: 100px;
+}
+.tes .tes-slider .box{
+    width: 100%;
+    padding: 20px 0px;
+    padding-left: 20px;
+    cursor: grab;
+}
+.tes .tes-slider .box .image-data{
+    display: flex;
+    align-items: center;
+}
+.tes .tes-slider .box .image-data img{
+    border-radius: 20px;
+    border: 3px solid var(---white);
+    box-shadow: 0px 0px 15px #22222241;
+}
+.tes .tes-slider .box .image-data .text{
+    margin-left: 20px;
+}
+.tes .tes-slider .box .image-data .text h2{
+    font-size: 30px;
+    color: var(---black);
+    font-weight: 600;
+}
+.tes .tes-slider .box .image-data .text p{
+    font-size: 16px;
+    color: var(---grey);
+    font-weight: 500;
+    margin-top: -0px;
+}
+.tes .tes-slider .box .image-data .text .icon{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.tes .tes-slider .box .image-data .text .icon i{
+    font-size: 20px;
+    color: var(---yellow);
+    padding-right: 5px;
+}
+.tes .tes-slider .box p{
+    font-size: 14px;
+    color: var(---grey);
+    font-weight: 500;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+/*Testimonial*/
+
+/*Blogs*/
+.blog{
+    margin-top: 150px;
+}
+.blog h1{
+    font-size: 60px;
+    color: var(---black);
+    font-weight: 600;
+    text-align: center;
+}
+.blog h1 span{
+    color: var(---red);
+    font-weight: 500;
+    position: relative;
+}
+.blog h1 span::before{
+    content: "";
+    background-color: #ff2d2925;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 10px;
+}
+.blog .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.blog .container .box{
+    position: relative;
+    text-align: center;
+}
+.blog .container .box .text{
+    margin-top: 50px;
+}
+.blog .container .box .date{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    height: 70px;
+    background-color: var(---red);
+    border-radius: 10px;
+    top: 59%;
+    left: 19%;
+}
+.blog .container .box .date p{
+    font-size: 25px;
+    color: var(---white);
+    font-weight: 600;
+}
+.blog .container .box h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+.blog .container .box button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin: 0px auto;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(---red);
+    cursor: pointer;
+}
+.blog .container .box button i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 5px;
+    animation: shake 2s ease infinite;
+}
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-2px);}
+	20%, 40%, 60%, 80% {transform: translateX(2px);}
+}
+
+/*Blogs*/
+
+/*Footer*/
+.footer{
+    background-color: var(---black);
+    margin-top: 150px;
+}
+.footer .container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.footer .container .link h1{
+    color: var(---white);
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .container .link h1 i{
+    display: none;
+}
+.footer .container .link .navbars{
+    margin-top: 20px;
+}
+.footer .container .link .navbars ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer .container .link .navbars ul li a{
+    font-size: 16px;
+    color: var(---white);
+    margin-left: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.footer .container .link .navbars ul li a:hover{
+    color: var(---red);
+}
+.footer .container .link .navbars ul li i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(---red);
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    color: var(---white);
+}
+.footer .container .link .nav{
+    display: block;
+    margin-top: 20px;
+}
+.footer .container .link .nav .icon{
+    display: flex;
+    margin-bottom: 20px;
+}
+.footer .container .link .nav .icon i{
+    font-size: 30px;
+    color: var(---red);
+}
+.footer .container .link .nav .icon .data h5{
+   color: var(---white);
+   font-size: 18px;
+   font-weight: 500;
+}
+.footer .container .link .nav .icon .data p{
+    font-size: 16px;
+    color: var(---white);
+    line-height: 30px;
+    font-weight: 300;
+}
+.footer .container .link .nav .icon .data{
+    margin-left: 10px;
+}
+.footer .container .link p{
+    font-size: 16px;
+    color: var(---white);
+    line-height: 30px;
+    font-weight: 400;
+}
+.footer .container .link .pp{
+    margin-top: 20px;
+}
+.footer .container .link .input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(---white);
+    border-radius: 15px;
+    width: 500px;
+    height: 80px;
+    margin-top: 20px;
+}
+.footer .container .link .input input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: var(---black);
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 20px;
+    border-radius: 15px 0px 0px 15px;
+}
+.footer .container .link .input input::placeholder{
+    color: var(---black);
+}
+.footer .container .link .input i{
+    color: var(---red);
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.footer .container .link .social{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.footer .container .link .social i{
+    font-size: 20px;
+    color: var(---white);
+    border: 2px solid var(---white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.footer .container .link .social i:hover{
+    color: var(---red);
+    border: 2px solid var(---red);
+}
+.footer .last{
+    border-top: 2px solid #ffffff3f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.footer .last p{
+    color: var(---white);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+/*Footer*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media quries */
+
+@media (max-width:1772px) {
+    section {
+        padding: 10px 100px;
+    }
+}
+
+@media (max-width:1674px) {
+    section {
+        padding: 10px 80px;
+    }
+    .abo .container .text h1{
+        font-size: 50px;
+    }
+    .abo .container .text p{
+        font-size: 15px;
+    }
+    .blog .container .box img{
+        width: 450px;
+    }
+}
+
+@media (max-width:1590px) {
+    section {
+        padding: 10px 60px;
+    }
+    .hero-area .container .text h1 {
+        font-size: 55px;
+    }
+
+    .hero-area .container .text p{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .hero-area .container .text .hero-button{
+        margin-top: 20px;
+    }
+    .abo .container .image{
+        width: 600px;
+    }
+    .abo .container .image img{
+        width: 100%;
+    }
+    .abo .container .image::before{
+        width: 500px;
+        height: 600px;
+    }
+}
+
+@media (max-width:1486px) {
+    .hero-area .container .image{
+        width: 800px;
+    }
+    .hero-area .container .image img{
+        width: 100%;
+    }
+    .blog .container .box img{
+        width: 400px;
+    }
+    .blog .container .box .date{
+        top: 52%;
+        left: 13%;
+    }
+    .footer .container .link p{
+        font-size: 12px;
+        color: var(---white);
+        line-height: 30px;
+        font-weight: 400;
+    }
+    .footer .container .link .input{
+        width: 400px;
+    }
+}
+
+
+@media (max-width:1390px) {
+    section {
+        padding: 10px 40px;
+    }
+    .hero-area .container .image{
+        width: 730px;
+    }
+    .abo .container .image{
+        width: 550px;
+    }
+}
+
+@media (max-width:1280px) {
+
+    html {
+        font-size: 80%;
+    }
+
+    section {
+        padding: 10px 20px;
+    }
+
+    .header .container #menu {
+        display: inherit;
+    }
+    .hero-area .container .image{
+        width: 600px;
+    }
+    .hero-area .container .text h1 {
+        font-size: 40px;
+    }
+    .hero-area .container .text h1 span::before{
+        height: 20px;
+    }
+    .hero-area .container .text p{
+        font-size: 14px;
+    }
+    .hero-area .i1{
+        width: 60px;
+        height: 60px;
+        top: 8%;
+    }
+    .hero-area .i2{
+        width: 60px;
+        height: 60px;
+    }
+    .hero-area .i3{
+        width: 60px;
+        height: 60px;
+    }
+    .hero-area .container .image .search-area{
+        position: absolute;
+        right: 7%;
+        top: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(---white);
+        width: 220px;
+        height: 130px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
+        border-radius: 0px 25px 25px 25px;
+    }
+    .hero-area .container .image .search-area .input{
+        width: 180px;
+    }
+    .hero-area .container .image .search-area h5{
+        font-size: 16px;
+    }
+    .ser{
+        margin-top: 130px;
+    }
+    .ser .container{
+        flex-wrap: wrap;
+        margin-top: 80px;
+    }
+    .abo{
+        margin-top: 130px;
+    }
+    .abo .container .text h1{
+        font-size: 40px;
+        color: var(---black);
+        font-weight: 600;
+    }
+    .abo .container .text h1 span::before{
+        height: 15px;
+        bottom: 8px;
+    }
+    .abo .container .text p{
+        margin: 20px 0px;
+        font-size: 14px
+    }
+    .pro{
+        margin-top: 130px;
+    }
+    .tes .tes-slider .box p{
+        font-size: 12px;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+    .tes .tes-slider .box .image-data img{
+        width: 140px;
+        height: 140px;
+    }
+    .tes .tes-slider .box .image-data .text h2{
+        font-size: 25px;
+    }
+    .tes .tes-slider .box .image-data .text p{
+        font-size: 12px;
+        color: var(---grey);
+        font-weight: 500;
+        margin-top: -0px;
+    }
+    .tes .tes-slider .box .image-data .text .icon{
+        margin-top: 0px;
+    }
+    .tes{
+        margin-top: 130px ;
+    }
+    .blog .container .box .date{
+        width: 250px;
+        left: 14%;
+        top: 52%;
+    }
+    .blog .container .box .date p{
+        font-size: 20px;
+    }
+    .blog .container .box img{
+        width: 350px;
+    }
+    .blog .container .box h2{
+        font-size: 20px;
+    }
+    .blog .container .box .text{
+        margin-top: 30px;
+    }
+    .blog{
+        margin-top: 130px;
+    }
+    .footer{
+        margin-top: 130px;
+    }
+    .footer .container .link .input{
+        width: 350px;
+    }
+}
+
+@media (max-width:1170px) {
+    .abo .container .text p{
+        margin: 20px 0px;
+        font-size: 12px
+    }
+}
+
+@media (max-width:1080px) {
+    section {
+        padding: 10px 15px;
+    }
+
+    .header .container .left .navbar {
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        left: -110%;
+        top: 16%;
+        transition: 0.7s all linear;
+        z-index: 10;
+    }
+
+    .header .container .left .navbar .link a:hover {
+        background-color: var(---red);
+        color: var(---white);
+    }
+
+    .header .container .left .navbar .link #home:hover {
+        border-radius: 0px 10px 0px 0px;
+    }
+
+    .header .container .left .navbar .link #con:hover {
+        border-radius: 0px 0px 10px 0px;
+    }
+
+    .header .container .left .navbar .link {
+        display: block;
+        background-color: var(---white);
+        box-shadow: 0px 0px 10px #ff2d291a;
+        width: 200px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .header .container .left .navbar .link a {
+        display: block;
+        line-height: 100px;
+    }
+    .hero-area .container{
+        display: block;
+    }
+    .hero-area .container .image {
+        width: 100%;
+    }
+    .hero-area .container .text h1 {
+        font-size: 65px;
+        color: var(---black);
+        font-weight: 500;
+        letter-spacing: 0px;
+    }
+    .hero-area .container .text h1 span::before{
+        top: 60%;
+    }
+    .hero-area .container .text p{
+        font-size: 20px;
+        color: var(---grey);
+        font-weight: 500;
+        line-height: 40px;
+        margin-top: 20px;
+    }
+    .ser{
+        margin-top: 100px;
+    }
+    .ser .container{
+        flex-wrap: wrap;
+        margin-top: 65px;
+    }
+    .ser h1{
+        font-size: 50px;
+    }
+    .ser h1 span::before{
+        bottom: 12px;
+    }
+    .ser .container .box{
+        width: 480px;
+    }
+    .ser .container #box-right{
+        border-left: none;
+        border-right: 2px solid var(---light);
+    }
+    .abo{
+        margin-top: 100px;
+    }
+    .abo .container{
+        display: block;
+    }
+    .abo .container .image{
+        width: 100%;
+    }
+    .abo .container .image::before{
+        width: 100%;
+        height: 80%;
+    }
+    .abo .container .text h1{
+        font-size: 60px;
+        color: var(---black);
+        font-weight: 600;
+    }
+    .abo .container .text h1 span{
+        color: var(---red);
+        font-weight: 500;
+        position: relative;
+    }
+    .abo .container .text h1 span::before{
+        content: "";
+        background-color: #ff2d2925;
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        bottom: 10px;
+    }
+    .abo .container .text p{
+        font-size: 16px;
+        line-height: 40px;
+        font-weight: 500;
+        color: var(---grey);
+        margin: 30px 0px;
+    }
+    .pro h1{
+        font-size: 50px;
+    }
+    .pro h1 span::before{
+        bottom: 12px;
+    }
+    .pro{
+        margin-top: 100px;
+    }
+    .pro .pro-slider{
+        margin-top: 65px;
+    }
+    .tes .tes-slider .box p{
+        font-size: 10px;
+        line-height: 25px;
+    }
+    .tes .tes-slider .box .image-data img{
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+    }
+    .tes .tes-slider .box .image-data .text{
+        margin-left: 10px;
+    }
+    .tes .tes-slider .box .image-data .text h2{
+        font-size: 20px;
+    }
+    .tes .tes-slider .box .image-data .text p{
+        font-size: 10px;
+    }
+    .tes{
+        margin-top: 100px ;
+    }
+    .tes .tes-slider{
+        margin-top: 65px;
+    }
+    .tes h1{
+        font-size: 50px;
+    }
+    .tes h1 span::before{
+        bottom: 12px;
+    }
+    .blog .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .blog .container .box{
+        margin: 20px 20px;
+    }
+    .blog h1{
+        font-size: 50px;
+    }
+    .blog h1 span::before{
+        bottom: 12px;
+    }
+    .blog{
+        margin-top: 100px;
+    }
+    .blog .container{
+        margin-top: 65px;
+    }
+    .footer{
+        margin-top: 100px;
+    }
+    .footer .container{
+        display: block;
+    }
+    .footer .container .image{
+        width: 200px;
+        height: 200px;
+    }
+    .footer .container .image img{
+        width: 100%;
+        height: 100%;
+    }
+    .footer .container .link h1 i{
+        display: inherit;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer .container .link .navbars{
+        display: none;
+    }
+    .footer .container .link .nav{
+        display: none;
+    }
+    .footer .container .link .nav2{
+        display: none;
+    }
+    .footer .container .link {
+        margin: 20px 0px;
+    }
+}
+
+@media (max-width:990px) {
+    .ser .container .box{
+        width: 460px;
+    }
+}
+
+@media (max-width:955px) {
+    .ser .container .box{
+        width: 420px;
+    }
+    .pro .pop-image img{
+        width: 600px;
+    }
+}
+
+@media (max-width:880px) {
+    .ser .container .box{
+        width: 390px;
+    }
+    .tes .tes-slider .box p{
+        font-size: 9px;
+        line-height: 25px;
+    }
+}
+
+@media (max-width:820px) {
+    .ser .container .box{
+        width: 360px;
+    }
+}
+
+@media (max-width:780px) {
+
+    section {
+        padding: 10px 10px;
+    }
+    .ser h1{
+        font-size: 40px;
+    }
+    .ser h1 span::before{
+        bottom: 8px;
+        height: 15px;
+    }
+    .abo .container .text h1{
+        font-size: 50px;
+        color: var(---black);
+        font-weight: 600;
+    }
+    .abo .container .text p{
+        font-size: 14px;
+        line-height: 40px;
+        font-weight: 500;
+        color: var(---grey);
+        margin: 30px 0px;
+    }
+    .pro h1{
+        font-size: 40px;
+    }
+    .pro h1 span::before{
+        bottom: 8px;
+        height: 15px;
+    }
+    .pro .pop-image img{
+        width: 450px;
+    }
+    .tes h1{
+        font-size: 40px;
+    }
+    .tes h1 span::before{
+        bottom: 8px;
+        height: 15px;
+    }
+    .blog h1 span::before{
+        bottom: 8px;
+        height: 15px;
+    }
+    .blog h1{
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width:740px) {
+    .ser .container{
+        justify-content: center;
+    }
+    .ser .container .box{
+        border-bottom: 2px solid var(---light);
+    }
+    .ser .container #box-left{
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid var(---light);
+    }
+    .ser .container #box-right{
+        border-left: none;
+        border-right: none;
+    }
+
+}
+
+
+@media (max-width:700px) {
+    .ser .container .box{
+        width: 340px;
+        border-bottom: 2px solid var(---light);
+    }
+    .ser .container #box-left{
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid var(---light);
+    }
+    .ser .container #box-right{
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (max-width:690px) {
+    .hero-area .i1{
+        width: 60px;
+        height: 60px;
+        top: 13%;
+        right: 40%;
+    }
+    .hero-area .i2{
+        width: 60px;
+        height: 60px;
+        right: 57%;
+        top: 85%;
+    }
+    .hero-area .i3{
+        width: 60px;
+        height: 60px;
+        right: 2%;
+    }
+    .hero-area .container .image .search-area{
+        position: absolute;
+        right: 5%;
+        top: 76%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(---white);
+        width: 190px;
+        height: 100px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
+        border-radius: 0px 25px 25px 25px;
+    }
+    .hero-area .container .image .search-area .input{
+        width: 140px;
+        height: 35px;
+        margin-top: 5px;
+    }
+    .hero-area .container .image .search-area h5{
+        font-size: 14px;
+    }
+    .hero-area .container .image .search-area .input i{
+        height: 35px;
+        font-size: 9px;
+    }
+    .hero-area .container .text h1 {
+        font-size: 40px;
+    }
+    .hero-area .container .text h1 span::before{
+        height: 20px;
+    }
+    .hero-area .container .text p{
+        font-size: 14px;
+    }
+    .ser h1 span::before{
+        bottom: 7px;
+        height: 10px;
+    }
+    .ser h1{
+        font-size: 30px;
+    }
+    .ser .container{
+        margin-top: 50px;
+    }
+    .ser{
+        margin-top: 50px;
+    }
+    .abo{
+        margin-top: 50px;
+    }
+    .abo .container .text{
+        margin-top: 50px;
+    }
+    .abo .container .text h1{
+        font-size: 40px;
+        color: var(---black);
+        font-weight: 600;
+    }
+    .abo .container .text h1 span::before{
+        bottom: 8px;
+        height: 15px;
+    }
+    .abo .container .text p{
+        font-size: 12px;
+        line-height: 40px;
+        font-weight: 500;
+        color: var(---grey);
+        margin: 10px 0px;
+    }
+    .pro h1 span::before{
+        bottom: 7px;
+        height: 10px;
+    }
+    .pro h1{
+        font-size: 30px;
+    }
+    .pro{
+        margin-top: 50px;
+    }
+    .pro .pro-slider{
+        margin-top: 50px;
+    }
+    .tes .tes-slider .box{
+        margin: 0px auto;
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .tes .tes-slider .box #para{
+        text-align: center;
+    }
+    .tes{
+        margin-top: 50px ;
+    }
+    .tes .tes-slider{
+        margin-top: 50px;
+    }
+    .tes h1 span::before{
+        bottom: 7px;
+        height: 10px;
+    }
+    .tes h1{
+        font-size: 30px;
+    }
+    .blog h1 span::before{
+        bottom: 7px;
+        height: 10px;
+    }
+    .blog h1{
+        font-size: 30px;
+    }
+    .blog{
+        margin-top: 50px;
+    }
+    .blog .container{
+        margin-top: 50px;
+    }
+    .footer{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:550px) {
+    .header .container .right button {
+        width: 130px;
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .header .container .right button::before {
+        width: 110px;
+        height: 45px;
+    }
+
+    .header .container .right .button {
+        position: relative;
+        background-color: transparent;
+    }
+
+    .header .container .right .button i {
+        display: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header .container .right .button button {
+        position: absolute;
+        right: 0;
+        top: 110%;
+        display: none;
+    }
+
+    .header .container .left .navbar .link {
+        width: 150px;
+    }
+
+    .header .container .left .navbar .link a {
+        line-height: 60px;
+        font-size: 16px;
+    }
+    .hero-area .i1{
+        width: 40px;
+        height: 40px;
+        top: 13%;
+        right: 40%;
+    }
+    .hero-area .i2{
+        width: 40px;
+        height: 40px;
+        right: 57%;
+        top: 85%;
+    }
+    .hero-area .i3{
+        width: 40px;
+        height: 40px;
+        right: 2%;
+    }
+    .hero-area .container .image .search-area{
+        right: 0%;
+        top: 70%;
+        width: 150px;
+        height: 80px;
+        border-radius: 0px 15px 15px 15px;
+    }
+    .hero-area .container .image .search-area::before{
+        width: 6px;
+        height: 6px;
+        left: 5px;
+        top: 5px;
+    }
+    .hero-area .container .image .search-area .input{
+        width: 110px;
+        height: 30px;
+        margin-top: 5px;
+    }
+    .hero-area .container .image .search-area .input input{
+        font-size: 8px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .hero-area .container .image .search-area h5{
+        font-size: 12px;
+    }
+    .hero-area .container .image .search-area .input i{
+        height: 30px;
+        font-size: 8px;
+        width: 35px;
+    }
+    .abo .container .text h1 span::before{
+        bottom: 8px;
+        height: 10px;
+    }
+    .abo .container .text h1{
+        font-size: 30px;
+        color: var(---black);
+        font-weight: 600;
+    }
+    .abo .container .text p{
+        font-size: 10px;
+        line-height: 30px;
+        font-weight: 500;
+        color: var(---grey);
+        margin: 10px 0px;
+    }
+    .pro .pro-slider .image img{
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .pro .pop-image img{
+        width: 400px;
+    }
+    .footer .container .link h1{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:430px) {
+    .hero-area .container .text h1 {
+        font-size: 30px;
+    }
+    .hero-area .container .text h1 span::before{
+        height: 15px;
+    }
+    .hero-area .container .text p{
+        font-size: 12px;
+        line-height: 30px;
+    }
+    .hero-area .container .text .hero-button button{
+        width: 140px;
+        height: 60px;
+        font-size: 12px;
+    }
+    .hero-area .container .text .hero-button button::before{
+        width: 120px;
+        height: 45px;
+        position: absolute;
+        left: 9px;
+        top: 6px;
+        border-radius: 10px;
+        z-index: -1;
+    }
+    .hero-area .container .text .hero-button a{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .abo .container .text .abo-button button{
+        width: 140px;
+        height: 60px;
+        font-size: 12px;
+    }
+    .abo .container .text .abo-button button::before{
+        width: 120px;
+        height: 45px;
+        position: absolute;
+        left: 9px;
+        top: 6px;
+        border-radius: 10px;
+        z-index: -1;
+    }
+    .abo .container .text .abo-button a{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .abo .container .text p{
+        font-size: 9px;
+        line-height: 25px;
+    }
+    .pro .pop-image img{
+        width: 350px;
+    }
+    .tes h1{
+        font-size: 27px;
+    }
+    .tes .tes-slider .box .image-data img{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        border: 2px solid var(---white);
+    }
+    .tes .tes-slider .box .image-data .text .icon i{
+        font-size: 16px;
+    }
+    .footer .container .image{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width:400px) {
+    .header .container .left img {
+        width: 60%;
+    }
+
+    .header .container .right #speaker {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .header .container #menu {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .header .container #pro {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header .container .left .navbar .link {
+        width: 150px;
+    }
+
+    .header .container .left .navbar {
+        top: 10%;
+    }
+
+    .header .container .left .navbar .link a {
+        line-height: 60px;
+        font-size: 16px;
+    }
+    .hero-area .i1{
+        width: 35px;
+        height: 35px;
+        top: 13%;
+        right: 40%;
+    }
+    .hero-area .i2{
+        width: 35px;
+        height: 35px;
+        right: 57%;
+        top: 85%;
+    }
+    .hero-area .i3{
+        width: 35px;
+        height: 35px;
+        right: 2%;
+    }
+    .hero-area .container .image .search-area{
+        right: 0%;
+        top: 72%;
+        width: 130px;
+        height: 70px;
+        border-radius: 0px 10px 10px 10px;
+    }
+    .hero-area .container .image .search-area .input{
+        width: 100px;
+        height: 30px;
+        margin-top: 5px;
+    }
+    .hero-area .container .image .search-area .input input{
+        font-size: 6px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .hero-area .container .image .search-area h5{
+        font-size: 10px;
+    }
+    .hero-area .container .image .search-area .input i{
+        height: 30px;
+        font-size: 8px;
+        width: 35px;
+    }
+    .hero-area .container .text h1 {
+        font-size: 25px;
+    }
+    .hero-area .container .text h1 span::before{
+        height: 10px;
+        top: 60%;
+    }
+    .hero-area .container .text p{
+        font-size: 10px;
+        line-height: 25px;
+        margin-top: 10px;
+    }
+    .hero-area .container .text .hero-button{
+        margin-top: 10px;
+    }
+    .hero-area .container .text .hero-button button{
+        width: 100px;
+        height: 40px;
+        font-size: 8px;
+    }
+    .hero-area .container .text .hero-button button::before{
+        width: 80px;
+        height: 25px;
+        position: absolute;
+        left: 9px;
+        top: 6px;
+        border-radius: 5px;
+        z-index: -1;
+    }
+    .hero-area .container .text .hero-button a{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .ser .container{
+        margin-top: 30px;
+    }
+    .ser{
+        margin-top: 30px;
+    }
+    .ser .container .box h1{
+        font-size: 20px;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+    .ser .container .box{
+        height: 380px;
+    }
+    .ser .container .box p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .ser .container .box img{
+        width: 120px;
+        height: 120px;
+    }
+    .ser .container .box button{
+        font-size: 14px;
+    }
+    .abo{
+        margin-top: 30px;
+    }
+    .abo .container .text{
+        margin-top: 30px;
+    }
+    .abo .container .text p{
+        font-size: 8px;
+        line-height: 20px;
+    }
+    .abo .container .text .abo-button{
+        margin-top: 20px;
+    }
+    .abo .container .text .abo-button button{
+        width: 100px;
+        height: 40px;
+        font-size: 8px;
+    }
+    .abo .container .text .abo-button button::before{
+        width: 80px;
+        height: 25px;
+        position: absolute;
+        left: 9px;
+        top: 6px;
+        border-radius: 5px;
+        z-index: -1;
+    }
+    .abo .container .text .abo-button a{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .abo .container .image::before{
+        border-radius: 100px;
+    }
+    .pro{
+        margin-top: 30px;
+    }
+    .pro .pro-slider{
+        margin-top: 30px;
+    }
+    .pro .pop-image img{
+        width: 300px;
+    }
+    .tes .tes-slider .box{
+        padding: 15px 0px;
+    }
+    .tes .tes-slider .box #para{
+        font-size: 7px;
+        line-height: 20px;
+    }
+    .tes{
+        margin-top: 30px ;
+    }
+    .tes .tes-slider{
+        margin-top: 30px;
+    }
+    .blog .container .box img{
+        width: 100%;
+    }
+    .blog .container .box .date{
+        width: 180px;
+        height: 60px;
+        left: 21%;
+        top: 53%;
+    }
+    .blog .container .box .date p{
+        font-size: 16px;
+    }
+    .blog{
+        margin-top: 30px ;
+    }
+    .blog .container{
+        margin-top: 30px;
+    }
+    .blog .container .box button{
+        font-size: 14px;
+    }
+    .footer{
+        margin-top: 30px;
+    }
+    .footer .container .link .input{
+        width: 100%;
+    }
+    .footer .container .link h1{
+        font-size: 16px;
+    }
+    .footer .last p{
+        font-size: 12px;
+    }
+    .footer .container .image{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width:350px) {
+    .abo .container .text p{
+        font-size: 7px;
+        line-height: 20px;
+    }
+    .ser h1 span::before{
+        bottom: 5px;
+        height: 8px;
+    }
+    .ser h1{
+        font-size: 25px;
+    }
+    .ser .container .box p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .pro h1 span::before{
+        bottom: 5px;
+        height: 8px;
+    }
+    .pro h1{
+        font-size: 25px;
+    }
+    .tes h1 span::before{
+        bottom: 5px;
+        height: 8px;
+    }
+    .tes h1{
+        font-size: 25px;
+    }
+    .blog h1 span::before{
+        bottom: 5px;
+        height: 8px;
+    }
+    .blog h1{
+        font-size: 25px;
+    }
+    .blog .container .box .date{
+        width: 130px;
+        height: 50px;
+        left: 25%;
+        top: 51%;
+    }
+    .blog .container .box .date p{
+        font-size: 12px;
+    }
+    .blog .container .box h2{
+        font-size: 16px;
+    }
+    .pro .pop-image img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* media quries */
